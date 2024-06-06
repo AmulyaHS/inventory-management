@@ -52,6 +52,14 @@ class NextPage:
         print(f"Name: {name}, USN: {usn}, Phone: {phone}, Email: {email}")
         # Add your logic to handle the form data here
 
+         # Clear the frame
+        for widget in self.bg_frame.winfo_children():
+            widget.destroy()
+
+        # Display Thank You message
+        self.thank_you_label = Label(self.bg_frame, text="Thank You!", font=('yu gothic ui', 50, "bold"), bg="#040405", fg='white')
+        self.thank_you_label.pack(pady=20)
+
 class LoginPage:
     def __init__(self, window):
         self.window = window
